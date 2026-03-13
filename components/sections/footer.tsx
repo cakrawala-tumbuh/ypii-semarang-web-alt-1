@@ -8,12 +8,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
           {/* Brand */}
           <div>
-            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#DAEFB3] to-[#2b3a1e] flex items-center justify-center mb-4">
-              <span className="text-xs font-bold text-white">KD</span>
-            </div>
-            <p className="text-xs font-black uppercase tracking-widest text-[#9D0A0E] mb-2">
-              SMA Kebon Dalem Semarang
-            </p>
+            <img
+              src="/images/logo.svg"
+              alt="Logo Kebon Dalem"
+              className="w-48 h-auto mb-4"
+              style={{ maxWidth: '220px' }}
+            />
             <strong className="block text-lg font-black text-white mb-3.5">
               Cerdas · Otentik · Iman · Solider
             </strong>

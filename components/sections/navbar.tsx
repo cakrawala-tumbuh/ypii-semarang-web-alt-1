@@ -21,13 +21,14 @@ export function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-3.5 flex items-center justify-between">
         {/* Brand */}
         <Link href="#" className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#2b3a1e] to-[#DAEFB3] flex items-center justify-center">
-            <span className="text-xs font-bold text-white">KD</span>
-          </div>
-          <div className="flex flex-col">
-            <strong className="text-lg font-black text-[#2b3a1e] leading-tight">Kebon Dalem</strong>
-            <span className="text-xs text-gray-600 uppercase tracking-wider">SMA Semarang</span>
-          </div>
+          <Image
+            src="/images/logo.svg"
+            alt="Logo Kebon Dalem"
+            width={180}
+            height={48}
+            className="object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Links */}
