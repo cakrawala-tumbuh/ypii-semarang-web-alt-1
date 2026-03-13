@@ -31,25 +31,17 @@ export function Hero() {
         <div className="grid grid-cols-1 gap-16 lg:gap-20 items-center">
           {/* Left Content */}
           <div>
-            {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 bg-[rgba(157,10,14,.12)] border border-[rgba(157,10,14,.35)] rounded-full px-5 py-1.5 mb-6 w-fit">
-              <svg className="w-2.5 h-2.5 text-[#9D0A0E]" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              <span className="text-xs font-semibold uppercase tracking-widest text-[#9D0A0E]">
-                Explore Yourself
-              </span>
-            </div>
 
-            {/* Title */}
-            <h1 className="text-5xl lg:text-7xl font-black text-white uppercase leading-tight mb-4">
-              Know Your
+            {/* Eyebrow as Headline */}
+            <h1 className="text-5xl lg:text-7xl font-black uppercase leading-tight mb-4">
+              <span className="text-white">Explore</span>{' '}
+              <span className="text-[#9D0A0E]">Yourself</span>
               <br />
-              <span className="text-[#9D0A0E]">Potential</span>
+              <span className="text-white">Know</span>{' '}
+              <span className="text-[#9D0A0E]">Your Potential</span>
               <br />
-              Unlock The
-              <br />
-              Next Level
+              <span className="text-white">Unlock</span>{' '}
+              <span className="text-[#9D0A0E]">The Next Level</span>
             </h1>
 
             {/* Subtitle */}
