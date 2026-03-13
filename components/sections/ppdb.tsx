@@ -6,15 +6,16 @@ import { FormEvent, useState } from 'react'
 
 export function PPDB() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    school: '',
+    nama_anak: '',
+    tanggal_lahir_anak: '',
+    unit_dituju: '',
+    nama_orang_tua_calon_siswa: '',
+    wa_orang_tua_siswa: '',
   })
   const [submitted, setSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
@@ -27,7 +28,13 @@ export function PPDB() {
     await new Promise((resolve) => setTimeout(resolve, 1500))
 
     setSubmitted(true)
-    setFormData({ name: '', email: '', phone: '', school: '' })
+    setFormData({
+      nama_anak: '',
+      tanggal_lahir_anak: '',
+      unit_dituju: '',
+      nama_orang_tua_calon_siswa: '',
+      wa_orang_tua_siswa: '',
+    })
     setIsLoading(false)
 
     // Reset submitted state after 5 seconds
@@ -85,17 +92,7 @@ export function PPDB() {
                   Daftar PPDB Sekarang
                 </Link>
               </Button>
-              <Button
-                asChild
-                className="bg-transparent text-white border-2 border-white/70 hover:bg-white/10 rounded-full px-8 font-bold inline-flex items-center gap-2"
-              >
-                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.989 1.518c-1.528.926-2.593 2.322-2.788 3.829-.197 1.507.098 3.157 1.329 4.716.526.614 1.235 1.295 2.151 1.99.916.696 1.894 1.354 3.035 1.682 1.14.329 2.393.366 3.633.122 1.24-.244 2.322-.873 3.137-1.683 1.062-1.05 1.699-2.486 1.895-4.018.196-1.532-.098-3.182-1.329-4.741-.526-.614-1.235-1.295-2.151-1.99-.916-.696-1.894-1.354-3.035-1.682-1.14-.33-2.393-.366-3.633-.122m0 0" />
-                  </svg>
-                  Hubungi Kami
-                </a>
-              </Button>
+
             </div>
           </div>
 
@@ -120,54 +117,80 @@ export function PPDB() {
                 </p>
               </div>
             ) : (
+
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label className="block text-sm font-semibold text-white mb-2">Nama Lengkap *</label>
+                  <label className="block text-sm font-semibold text-white mb-2">Nama Anak *</label>
                   <input
                     type="text"
-                    name="name"
-                    value={formData.name}
+                    name="nama_anak"
+                    value={formData.nama_anak}
                     onChange={handleChange}
                     required
-                    placeholder="Nama siswa"
+                    placeholder="Nama Anak"
                     className="w-full bg-[rgba(255,255,255,.08)] border border-[rgba(255,255,255,.15)] rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#9D0A0E] transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-white mb-2">Email *</label>
+                  <label className="block text-sm font-semibold text-white mb-2">Tanggal Lahir Anak *</label>
                   <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
+                    type="date"
+                    name="tanggal_lahir_anak"
+                    value={formData.tanggal_lahir_anak}
                     onChange={handleChange}
                     required
-                    placeholder="email@example.com"
                     className="w-full bg-[rgba(255,255,255,.08)] border border-[rgba(255,255,255,.15)] rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#9D0A0E] transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-white mb-2">Nomor Telepon *</label>
+                  <label className="block text-sm font-semibold text-white mb-2">Unit yang dituju *</label>
+                  <select
+                    name="unit_dituju"
+                    value={formData.unit_dituju}
+                    onChange={handleChange}
+                    required
+                    className="w-full bg-[rgba(255,255,255,.08)] border border-[rgba(255,255,255,.15)] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#9D0A0E] transition-colors"
+                  >
+                    <option value="" disabled>Pilih unit</option>
+                    <option value="KB-TK Cor Yesu">KB-TK Cor Yesu</option>
+                    <option value="KB-TK Kebon Dalem">KB-TK Kebon Dalem</option>
+                    <option value="KB-TK Kebon Dalem 2">KB-TK Kebon Dalem 2</option>
+                    <option value="SD Cahaya Nur">SD Cahaya Nur</option>
+                    <option value="SD Kebon Dalem">SD Kebon Dalem</option>
+                    <option value="SD Kebon Dalem 2">SD Kebon Dalem 2</option>
+                    <option value="SD Maria Bintang Laut">SD Maria Bintang Laut</option>
+                    <option value="SD Pangudi Utami">SD Pangudi Utami</option>
+                    <option value="SMA Kebon Dalem">SMA Kebon Dalem</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-white mb-2">Nama Orang Tua Calon Siswa *</label>
+                  <input
+                    type="text"
+                    name="nama_orang_tua_calon_siswa"
+                    value={formData.nama_orang_tua_calon_siswa}
+                    onChange={handleChange}
+                    required
+                    placeholder="Nama Orang Tua"
+                    className="w-full bg-[rgba(255,255,255,.08)] border border-[rgba(255,255,255,.15)] rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#9D0A0E] transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-white mb-2">No. WA Orang Tua Siswa *</label>
                   <input
                     type="tel"
-                    name="phone"
-                    value={formData.phone}
+                    name="wa_orang_tua_siswa"
+                    value={formData.wa_orang_tua_siswa}
                     onChange={handleChange}
                     required
-                    placeholder="+62 812-xxxx-xxxx"
-                    className="w-full bg-[rgba(255,255,255,.08)] border border-[rgba(255,255,255,.15)] rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#9D0A0E] transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-white mb-2">Asal Sekolah</label>
-                  <input
-                    type="text"
-                    name="school"
-                    value={formData.school}
-                    onChange={handleChange}
-                    placeholder="SMP XXX"
+                    placeholder="Contoh: 081234567890"
+                    pattern="[0-9]{10,15}"
+                    minLength={10}
+                    maxLength={15}
                     className="w-full bg-[rgba(255,255,255,.08)] border border-[rgba(255,255,255,.15)] rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#9D0A0E] transition-colors"
                   />
                 </div>
