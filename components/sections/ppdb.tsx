@@ -154,15 +154,10 @@ export function PPDB() {
                     className="w-full bg-[rgba(255,255,255,.08)] border border-[rgba(255,255,255,.15)] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#9D0A0E] transition-colors"
                   >
                     <option value="" disabled>Pilih unit</option>
-                    <option value="KB-TK Cor Yesu">KB-TK Cor Yesu</option>
-                    <option value="KB-TK Kebon Dalem">KB-TK Kebon Dalem</option>
-                    <option value="KB-TK Kebon Dalem 2">KB-TK Kebon Dalem 2</option>
-                    <option value="SD Cahaya Nur">SD Cahaya Nur</option>
                     <option value="SD Kebon Dalem">SD Kebon Dalem</option>
                     <option value="SD Kebon Dalem 2">SD Kebon Dalem 2</option>
-                    <option value="SD Maria Bintang Laut">SD Maria Bintang Laut</option>
-                    <option value="SD Pangudi Utami">SD Pangudi Utami</option>
                     <option value="SMA Kebon Dalem">SMA Kebon Dalem</option>
+                    <option value="SMP Kebon Dalem">SMP Kebon Dalem</option>
                   </select>
                 </div>
 
