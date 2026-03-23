@@ -8,24 +8,17 @@ export function About() {
           {/* Image Grid */}
           <div className="hidden lg:grid grid-cols-2 gap-4 relative">
             <Image
-              src="/images/about-nature-learning.jpg"
-              alt="Siswa belajar di alam"
-              width={380}
-              height={500}
-              className="col-span-1 row-span-2 w-full rounded-2xl object-cover"
-            />
-            <Image
               src="/images/about-project-lab.jpg"
               alt="Lab proyek"
               width={360}
-              height={240}
+              height={400}
               className="col-span-1 w-full rounded-2xl object-cover"
             />
             <Image
               src="/images/about-presentation.jpg"
               alt="Siswa presentasi"
               width={360}
-              height={240}
+              height={400}
               className="col-span-1 w-full rounded-2xl object-cover"
             />
 
