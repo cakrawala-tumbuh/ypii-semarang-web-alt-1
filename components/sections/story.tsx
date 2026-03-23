@@ -11,35 +11,35 @@ export function Story() {
   return (
     <section
       id="program"
-      className="py-24 bg-gradient-to-br from-[#2b3a1e] to-[#3d5228] relative overflow-hidden"
+      className="py-24 bg-gradient-to-br from-[#DAEFB3] to-[#c8e89a] relative overflow-hidden"
     >
       {/* Decorative Elements */}
       <div
-        className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[rgba(218,239,179,.08)] -mr-32 -mt-32 pointer-events-none"
+        className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[rgba(43,58,30,.08)] -mr-32 -mt-32 pointer-events-none"
       />
       <div
-        className="absolute bottom-0 left-0 w-full h-full rounded-full bg-[rgba(255,255,255,.03)] -ml-32 -mb-40 pointer-events-none"
+        className="absolute bottom-0 left-0 w-full h-full rounded-full bg-[rgba(43,58,30,.04)] -ml-32 -mb-40 pointer-events-none"
       />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div className="order-2 lg:order-1">
-            <span className="inline-block text-xs font-black uppercase tracking-widest text-[#DAEFB3] mb-3">
+            <span className="inline-block text-xs font-black uppercase tracking-widest text-[#2b3a1e]/60 mb-3">
               Cerita Nyata
             </span>
-            <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">
+            <h2 className="text-4xl lg:text-5xl font-black text-[#2b3a1e] mb-6">
               Bagaimana Kulit Pisang
               <br />
               Mengajarkan Lebih <span className="text-[#9D0A0E]">Banyak</span>
               <br />
               Daripada Textbook
             </h2>
-            <p className="text-base leading-relaxed text-white/75 mb-6">
+            <p className="text-base leading-relaxed text-[#2b3a1e]/70 mb-6">
               Lihat langsung bagaimana siswa kami mengubah sampah jadi produk yang laku — dan skill
               apa yang mereka dapat dari prosesnya.
             </p>
-            <p className="text-base leading-relaxed text-white/75 mb-8">
+            <p className="text-base leading-relaxed text-[#2b3a1e]/70 mb-8">
               Ini bukan dongeng. Ini project nyata yang mengajarkan critical thinking, teamwork,
               public speaking, dan entrepreneurship dalam satu journey.
             </p>
@@ -54,7 +54,7 @@ export function Story() {
               ].map((tag, i) => (
                 <span
                   key={i}
-                  className="bg-[rgba(218,239,179,.15)] border border-[rgba(218,239,179,.35)] text-[#DAEFB3] px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest"
+                  className="bg-[rgba(43,58,30,.1)] border border-[rgba(43,58,30,.25)] text-[#2b3a1e] px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest"
                 >
                   {tag}
                 </span>

@@ -6,25 +6,19 @@ export function Hero() {
   return (
     <section
       id="beranda"
-      className="relative min-h-screen flex items-center overflow-hidden bg-[#2b3a1e]"
+      className="relative flex items-center overflow-hidden py-20 lg:py-28"
     >
-      {/* Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: 'url("/images/about-nature-learning.jpg")',
-          filter: 'brightness(0.45)',
-        }}
+      {/* Background Image */}
+      <Image
+        src="/images/about-nature-learning.jpg"
+        alt="Nature Learning"
+        fill
+        className="object-cover object-center"
+        priority
       />
 
-      {/* Overlay */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            'linear-gradient(135deg, rgba(43,58,30,.92) 0%, rgba(43,58,30,.6) 60%, rgba(0,0,0,.2) 100%)',
-        }}
-      />
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/55" />
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
@@ -45,12 +39,12 @@ export function Hero() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base lg:text-lg font-bold text-white/90 uppercase tracking-wider mb-4">
+            <p className="text-base lg:text-lg font-bold text-white/80 uppercase tracking-wider mb-4">
               Project-Based Learning · Semarang
             </p>
 
             {/* Description */}
-            <p className="text-base text-white/75 leading-relaxed mb-9 max-w-md">
+            <p className="text-base text-white/70 leading-relaxed mb-9 max-w-md">
               Belajar bukan tentang menghafal. Ini tentang mengalami, bereksperimen, dan menemukan
               siapa diri Anda sebenarnya.
             </p>
@@ -70,7 +64,7 @@ export function Hero() {
               </Button>
               <Button
                 asChild
-                className="bg-transparent text-white border-2 border-white/70 hover:bg-white/10 rounded-full px-8 font-bold inline-flex items-center gap-2"
+                className="bg-transparent text-white border-2 border-white/60 hover:bg-white/10 rounded-full px-8 font-bold inline-flex items-center gap-2"
               >
                 <Link href="#tentang">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,17 +79,17 @@ export function Hero() {
             <div className="flex flex-wrap gap-8">
               <div>
                 <div className="text-3xl font-black text-[#9D0A0E] leading-none">6+</div>
-                <div className="text-xs text-white/65 font-medium mt-1">Kompetensi Inti</div>
+                <div className="text-xs text-white/60 font-medium mt-1">Kompetensi Inti</div>
               </div>
               <div className="w-px bg-white/20" />
               <div>
                 <div className="text-3xl font-black text-[#9D0A0E] leading-none">100%</div>
-                <div className="text-xs text-white/65 font-medium mt-1">Project-Based</div>
+                <div className="text-xs text-white/60 font-medium mt-1">Project-Based</div>
               </div>
               <div className="w-px bg-white/20" />
               <div>
                 <div className="text-3xl font-black text-[#9D0A0E] leading-none">30+</div>
-                <div className="text-xs text-white/65 font-medium mt-1">Tahun Berpengalaman</div>
+                <div className="text-xs text-white/60 font-medium mt-1">Tahun Berpengalaman</div>
               </div>
             </div>
           </div>

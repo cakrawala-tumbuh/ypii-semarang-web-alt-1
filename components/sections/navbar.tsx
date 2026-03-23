@@ -24,8 +24,8 @@ export function Navbar() {
           <Image
             src="/images/logo.svg"
             alt="Logo Kebon Dalem"
-            width={180}
-            height={48}
+            width={56}
+            height={56}
             className="object-contain"
             priority
           />
