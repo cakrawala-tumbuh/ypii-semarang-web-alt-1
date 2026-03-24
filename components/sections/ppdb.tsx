@@ -154,6 +154,8 @@ export function PPDB() {
                     className="w-full bg-white/70 border border-[rgba(43,58,30,.2)] rounded-lg px-4 py-3 text-[#2b3a1e] focus:outline-none focus:border-[#9D0A0E] transition-colors"
                   >
                     <option value="" disabled>Pilih unit</option>
+                    <option value="KB-TK Kebon Dalem">KB-TK Kebon Dalem</option>
+                    <option value="KB-TK Kebon Dalem 2">KB-TK Kebon Dalem 2</option>
                     <option value="SD Kebon Dalem">SD Kebon Dalem</option>
                     <option value="SD Kebon Dalem 2">SD Kebon Dalem 2</option>
                     <option value="SMA Kebon Dalem">SMA Kebon Dalem</option>
